@@ -14,13 +14,10 @@ def main():
     # Environment Settings
     game = Game(
         render=True,
-        player_1=Player1(
-            nickname="Daddy",
-            model="ollama:llama3",
-        ),
+        player_1=None,
         player_2=Player2(
             nickname="Baby",
-            model="anthropic:claude-3-haiku-20240307",
+            model="yi:yi-spark",
         ),
     )
     return game.run()

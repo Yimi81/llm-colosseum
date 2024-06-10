@@ -28,3 +28,9 @@ def get_client(model_str):
         from llama_index.llms.ollama import Ollama
 
         return Ollama(model=model_name)
+
+    elif provider == "yi":
+        import os
+        from llama_index.llms.openai_like import OpenAILike
+
+        return OpenAILike(api_base="https://api.lingyiwanwu.com/v1", api_key=os.environ['YI_API_KEY'], model=model_name, is_chat_model=True)

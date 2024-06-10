@@ -47,6 +47,10 @@ class Player:
             assert (
                 os.environ.get("MISTRAL_API_KEY") is not None
             ), "Mistral API key not set"
+        if self.model.startswith("yi"):
+            assert (
+                os.environ.get("YI_API_KEY") is not None
+            ), "Yi API key not set"
 
 
 class Player1(Player):
@@ -181,8 +185,10 @@ class Game:
             from diambra.arena.utils.controller import get_diambra_controller
 
             self.player_1 = None
+            print(f"action_list: {self.env.unwrapped.get_actions_tuples()}")
             self.controller = get_diambra_controller(
                 self.env.unwrapped.get_actions_tuples(),
+                # skip_configure=True
                 # force_configure=True,
             )
             self.controller.start()

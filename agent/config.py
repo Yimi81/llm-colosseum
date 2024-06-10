@@ -17,6 +17,7 @@ MODELS = {
     },
     "GROQ": {"groq:gemma-7b-it"},
     "ANTHROPIC": {"anthropic:claude-3-haiku-20240307"},
+    "YI": {"yi:yi-large", "yi:yi-medium", "yi:yi-spark"},
 }
 
 

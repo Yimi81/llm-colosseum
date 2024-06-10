@@ -18,11 +18,11 @@ def main():
         save_game=True,
         player_1=Player1(
             nickname="Baby",
-            model="mistral:mistral-small-latest",
+            model="ollama:yi:v1.5",
         ),
         player_2=Player2(
             nickname="Daddy",
-            model="mistral:mistral-small-latest",
+            model="ollama:yi:v1.5",
         ),
     )
 
