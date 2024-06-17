@@ -14,7 +14,10 @@ def main():
     # Environment Settings
     game = Game(
         render=True,
-        player_1=None,
+        player_1=Player1(
+            nickname="Daddy",
+            model="yi:yi-large-turbo",
+        ),
         player_2=Player2(
             nickname="Baby",
             model="yi:yi-spark",

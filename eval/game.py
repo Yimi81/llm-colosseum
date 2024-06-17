@@ -188,7 +188,7 @@ class Game:
             print(f"action_list: {self.env.unwrapped.get_actions_tuples()}")
             self.controller = get_diambra_controller(
                 self.env.unwrapped.get_actions_tuples(),
-                # skip_configure=True
+                skip_configure=True
                 # force_configure=True,
             )
             self.controller.start()

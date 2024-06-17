@@ -16,7 +16,11 @@ def main():
     game = Game(
         render=True,
         save_game=True,
-        player_1=None,
+        player_1=Player1(
+            nickname="Baby",
+            model="ollama:yi:v1.5",
+            # model="ollama:mistral",
+        ),
         player_2=Player2(
             nickname="Daddy",
             model="ollama:yi:v1.5",
